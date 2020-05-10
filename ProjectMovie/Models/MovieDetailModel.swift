@@ -8,50 +8,40 @@
 import Foundation
 import SwiftyJSON
 
-struct MovieDetailModel: Codable {
-
-  enum CodingKeys: String, CodingKey {
-    case genres = "genres"
-    case id = "id"
-    case backdropPath = "backdrop_path"
-    case title = "title"
-    case posterPath = "poster_path"
-    case overview = "overview"
-    case status = "status"
-    case releaseDate = "release_date"
-  }
-
-  var genres: [MovieDetailGenres]?
-  var id: Int?
-  var backdropPath: String?
-  var title: String?
-  var posterPath: String?
-  var overview: String?
-  var status: String?
-  var releaseDate: String?
+class MovieDetailModel {
+    var genres: [MovieDetailGenres] = []
+    var id: Int = 0
+    var backdropPath: String?
+    var title: String?
+    var posterPath: String?
+    var overview: String?
+    var status: String?
+    var releaseDate: String?
     
-    init(json: JSON) {
+    required convenience init(json: JSON) {
         self.init()
-        
-        
+        let genre = json["genres"].arrayValue
+        for item in genre {
+            let genre = MovieDetailGenres(json: item)
+            self.genres.append(genre)
+        }
+        self.id = json["id"].intValue
+        self.backdropPath = json["backdrop_path"].stringValue
+        self.title = json["title"].stringValue
+        self.posterPath = json["poster_path"].stringValue
+        self.overview = json["overview"].stringValue
+        self.status = json["status"].stringValue
+        self.releaseDate = json["release_date"].stringValue
     }
-
 }
 
-struct MovieDetailGenres: Codable {
-
-  enum CodingKeys: String, CodingKey {
-    case id = "id"
-    case name = "name"
-  }
-
-  var id: Int?
-  var name: String?
-
-  init(from decoder: Decoder) throws {
-    let container = try decoder.container(keyedBy: CodingKeys.self)
-    id = try container.decodeIfPresent(Int.self, forKey: .id)
-    name = try container.decodeIfPresent(String.self, forKey: .name)
-  }
-
+class MovieDetailGenres {
+    var id: Int?
+    var name: String?
+    
+    required convenience init(json: JSON) {
+        self.init()
+        self.id = json["id"].intValue
+        self.name = json["name"].stringValue
+    }
 }

@@ -8,13 +8,31 @@
 
 import UIKit
 
-class ReviesViewController: UIViewController {
+class ReviewsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    
+    var idMovie: String?
+    let  viewModel = ReviewViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setComponent()
+        bindData()
     }
 
+    private func setComponent() {
+        tableView.register(cellType: ReviewsTableViewCell.self)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.separatorColor = UIColor.clear
+        tableView.dataSource = viewModel
+    }
+    
+    private func bindData() {
+        if let idMovie = self.idMovie {
+            viewModel.getListComment(id: idMovie) { (status) in
+                if status == true {
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
 }

@@ -9,16 +9,22 @@
 import UIKit
 
 class ReviewsTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var userAuthor: UILabel!
+    @IBOutlet weak var commentReview: UILabel!
+    
+    var review: MovieReviewsResults? {
+        didSet {
+            guard let value = self.review else {
+                return
+            }
+            self.userAuthor.text = "Author: "+(value.author ?? "")
+            self.commentReview.text = value.content
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

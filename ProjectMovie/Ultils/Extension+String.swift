@@ -6,4 +6,8 @@
 //  Copyright © 2020 Jerry Purnama Maulid. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension String {
+}
+
