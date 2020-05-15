@@ -22,6 +22,10 @@ enum State {
     }
 }
 
+public protocol IHomeGenre {
+    func getIdGenre(_ id: String, _ page: Int)
+}
+
 class MainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var buttonClose: UIButton!
@@ -34,6 +38,7 @@ class MainViewController: UIViewController {
     var idGenre: String?
     var didSelect: ((_ id: String, _ state: State) -> Void)?
     var pages: Int = 1
+    public var delegate: IHomeGenre?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,7 +112,7 @@ extension MainViewController: UITableViewDelegate {
             dismiss(animated: true) {
                 self.state = .discover
                 let id = "\(self.viewModel.genreArray?[indexPath.row].id ?? 0)"
-                self.didSelect?(id, self.state)
+                self.delegate?.getIdGenre(id, 1)
             }
         } else {
             print("Go to detail")

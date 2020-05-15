@@ -17,9 +17,7 @@ class Helper: NSObject {
         
         imageView.sd_setImage(with: URL(string: urlString))
     }
-    
 }
-
 
 class AlertHelper {
     static let share = AlertHelper()

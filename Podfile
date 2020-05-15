@@ -6,12 +6,13 @@ target 'ProjectMovie' do
   use_frameworks!
   
   # Pods for ProjectMovie
-  pod 'SwiftyJSON'
-  pod 'SDWebImage'
-  pod 'Moya/RxSwift'
+  pod 'SwiftyJSON', '5.0.0'
+  pod 'SDWebImage', '5.7.3'
+  pod 'Moya/RxSwift', '13.0.1'
   pod 'Moya-ModelMapper/RxSwift', '~> 9.0'
-  pod 'RxSwift'
-  pod 'RxCocoa'
+  pod 'RxSwift', '4.5.0'
+  pod 'RxCocoa', '4.5.0'
   pod 'Moya-ModelMapper/RxSwift', '~> 9.0'
+  pod 'Swinject', '2.7.1'
   
 end

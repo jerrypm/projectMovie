@@ -31,7 +31,7 @@ struct DiscoverModel: Codable {
     
 }
 
-struct DiscoverResults: Codable {
+public struct DiscoverResults: Codable {
     
     enum CodingKeys: String, CodingKey {
         case title = "title"
@@ -65,7 +65,7 @@ struct DiscoverResults: Codable {
     var originalTitle: String?
     var overview: String?
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         title = try container.decodeIfPresent(String.self, forKey: .title)
         posterPath = try container.decodeIfPresent(String.self, forKey: .posterPath)

@@ -26,14 +26,16 @@ PODS:
     - SDWebImage/Core (= 5.7.3)
   - SDWebImage/Core (5.7.3)
   - SwiftyJSON (5.0.0)
+  - Swinject (2.7.1)
 
 DEPENDENCIES:
   - Moya-ModelMapper/RxSwift (~> 9.0)
-  - Moya/RxSwift
-  - RxCocoa
-  - RxSwift
-  - SDWebImage
-  - SwiftyJSON
+  - Moya/RxSwift (= 13.0.1)
+  - RxCocoa (= 4.5.0)
+  - RxSwift (= 4.5.0)
+  - SDWebImage (= 5.7.3)
+  - SwiftyJSON (= 5.0.0)
+  - Swinject
 
 SPEC REPOS:
   trunk:
@@ -46,6 +48,7 @@ SPEC REPOS:
     - RxSwift
     - SDWebImage
     - SwiftyJSON
+    - Swinject
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -57,7 +60,8 @@ SPEC CHECKSUMS:
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SDWebImage: 97351f6582ceca541ea294ba66a1fcb342a331c2
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
 
-PODFILE CHECKSUM: 894d568801ac2361d5ae1caaed9a3ba19ea52814
+PODFILE CHECKSUM: 846994df23aee2b9d92259150b7be7c021f61ecc
 
 COCOAPODS: 1.8.3

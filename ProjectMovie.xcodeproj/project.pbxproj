@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		57C1D93FB246F320027178BF /* Pods_ProjectMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93FF0143DAC6421FB0999070 /* Pods_ProjectMovie.framework */; };
+		C454FD24246E0051002D8933 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C454FD22246E0051002D8933 /* HomeViewController.swift */; };
+		C454FD25246E0051002D8933 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C454FD23246E0051002D8933 /* HomeViewController.xib */; };
+		C454FD27246E0075002D8933 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C454FD26246E0075002D8933 /* HomePresenter.swift */; };
+		C454FD29246E008E002D8933 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C454FD28246E008E002D8933 /* HomeInteractor.swift */; };
+		C454FD2B246E00BC002D8933 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C454FD2A246E00BC002D8933 /* HomeWireframe.swift */; };
+		C454FD36246E09F8002D8933 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C454FD35246E09F8002D8933 /* HomeManager.swift */; };
+		C454FD38246E1BA4002D8933 /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C454FD37246E1BA4002D8933 /* HomeConfigurator.swift */; };
 		C494BE412467185B0060CA64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C494BE402467185B0060CA64 /* AppDelegate.swift */; };
 		C494BE452467185B0060CA64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C494BE442467185B0060CA64 /* ViewController.swift */; };
 		C494BE482467185B0060CA64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C494BE462467185B0060CA64 /* Main.storyboard */; };
@@ -47,6 +54,13 @@
 		493267BC94E4382EA9314BD0 /* Pods-ProjectMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectMovie.debug.xcconfig"; path = "Target Support Files/Pods-ProjectMovie/Pods-ProjectMovie.debug.xcconfig"; sourceTree = "<group>"; };
 		93FF0143DAC6421FB0999070 /* Pods_ProjectMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAAE7F2F16FD1165F8CDD986 /* Pods-ProjectMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectMovie.release.xcconfig"; path = "Target Support Files/Pods-ProjectMovie/Pods-ProjectMovie.release.xcconfig"; sourceTree = "<group>"; };
+		C454FD22246E0051002D8933 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C454FD23246E0051002D8933 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		C454FD26246E0075002D8933 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		C454FD28246E008E002D8933 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		C454FD2A246E00BC002D8933 /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
+		C454FD35246E09F8002D8933 /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
+		C454FD37246E1BA4002D8933 /* HomeConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
 		C494BE3D2467185B0060CA64 /* ProjectMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C494BE402467185B0060CA64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C494BE442467185B0060CA64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +127,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C454FD1F246DFCCD002D8933 /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				C454FD20246DFF4B002D8933 /* Classes */,
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
+		C454FD20246DFF4B002D8933 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C454FD34246E09E5002D8933 /* Manager */,
+				C454FD21246DFFC4002D8933 /* Module */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C454FD21246DFFC4002D8933 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				C454FD28246E008E002D8933 /* HomeInteractor.swift */,
+				C454FD26246E0075002D8933 /* HomePresenter.swift */,
+				C454FD22246E0051002D8933 /* HomeViewController.swift */,
+				C454FD23246E0051002D8933 /* HomeViewController.xib */,
+				C454FD2A246E00BC002D8933 /* HomeWireframe.swift */,
+				C454FD37246E1BA4002D8933 /* HomeConfigurator.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		C454FD34246E09E5002D8933 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C454FD35246E09F8002D8933 /* HomeManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		C494BE342467185A0060CA64 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +186,7 @@
 		C494BE3F2467185B0060CA64 /* ProjectMovie */ = {
 			isa = PBXGroup;
 			children = (
+				C454FD1F246DFCCD002D8933 /* VIPER */,
 				C494BE6D24673FA70060CA64 /* Ultils */,
 				C494BE5E24672B460060CA64 /* Networking */,
 				C494BE56246718DD0060CA64 /* Models */,
@@ -306,6 +359,7 @@
 				C494BE982468B4E20060CA64 /* PlayerViewController.xib in Resources */,
 				C494BE482467185B0060CA64 /* Main.storyboard in Resources */,
 				C494BE5D24671CBF0060CA64 /* MainViewController.xib in Resources */,
+				C454FD25246E0051002D8933 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,17 +413,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				C494BE77246755AF0060CA64 /* Extension+tableView.swift in Sources */,
+				C454FD38246E1BA4002D8933 /* HomeConfigurator.swift in Sources */,
 				C494BE9F2468BA9D0060CA64 /* ReviewsTableViewCell.swift in Sources */,
 				C494BE6C246736840060CA64 /* MainViewModel.swift in Sources */,
 				C494BE5C24671CBF0060CA64 /* MainViewController.swift in Sources */,
 				C494BE7A2467620D0060CA64 /* DetailViewController.swift in Sources */,
+				C454FD2B246E00BC002D8933 /* HomeWireframe.swift in Sources */,
 				C494BE452467185B0060CA64 /* ViewController.swift in Sources */,
 				C494BE71246746AF0060CA64 /* GenreModel.swift in Sources */,
+				C454FD29246E008E002D8933 /* HomeInteractor.swift in Sources */,
 				C494BE66246733170060CA64 /* DiscoverTableViewCell.swift in Sources */,
 				C494BE90246866BB0060CA64 /* Helper.swift in Sources */,
 				C494BE922468798E0060CA64 /* DetailViewModel.swift in Sources */,
 				C494BE972468B4E20060CA64 /* PlayerViewController.swift in Sources */,
+				C454FD24246E0051002D8933 /* HomeViewController.swift in Sources */,
+				C454FD36246E09F8002D8933 /* HomeManager.swift in Sources */,
 				C494BE6224672C730060CA64 /* Config.swift in Sources */,
+				C454FD27246E0075002D8933 /* HomePresenter.swift in Sources */,
 				C494BE412467185B0060CA64 /* AppDelegate.swift in Sources */,
 				C494BE8C246861420060CA64 /* MovieReviewsModel.swift in Sources */,
 				C494BE9B2468B7CB0060CA64 /* ReviewsViewController.swift in Sources */,
